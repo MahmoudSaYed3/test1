@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/EG-ar-20220523-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+    background-size: cover;
+    /* box-shadow: inset 0px 0px 100px 290px rgb(0 0 0 / 70%); */
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5px 50px;
+}
+
+
+.parent .links {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.parent::before {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.911)20%, rgba(0, 0, 0, 0.596)80%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    /* box-shadow: 0px 250px 20px 20px rgba(0, 0, 0, 0.596); */
+}
+
+.parent::after {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.911)20%, rgba(0, 0, 0, 0.596)80%);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.links .right {
+    padding-top: 10px;
+    position: relative;
+}
+
+.links .right button:hover {
+    cursor: pointer;
+}
+
+.links img {
+    width: 134px;
+    height: 60px;
+
+}
+
+.links .right select {
+    background-color: black;
+    color: #f1ebeb;
+    text-indent: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 0px;
+
+}
+
+.fa-solid {
+    font-size: 15px;
+    color: #f1ebeb;
+    position: absolute;
+    left: 5px;
+    top: 45%;
+}
+
+.links .right button {
+    width: 88px;
+    color: #f1ebeb;
+    background-color: red;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 6px;
+}
+
+.parent .content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #f1ebeb;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.parent .content .head {
+    font-size: 55px;
+    width: 600px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.parent .content h4 {
+    font-size: 30px;
+    font-weight: 200;
+    padding-bottom: 20px;
+    width: 600px;
+    text-align: center;
+}
+
+.parent .content p {
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom: 20px;
+    width: 700px;
+    text-align: center;
+}
+
+.parent .content form {
+    height: 60px;
+    width: 900px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.parent .content .mail {
+    width: 450px;
+    padding: 0px 5px;
+    height: 60px;
+    border-style: none;
+    position: relative;
+}
+
+.parent .content .mail:focus {
+    outline: none;
+
+}
+
+form .sub {
+    width: 245px;
+    height: 60px;
+    margin-left: 0px;
+    background-color: red;
+    color: white;
+    border-style: none;
+    font-size: 18px;
+
+}
+
+form .sub:hover {
+    background-color: rgb(248, 42, 42);
+    cursor: pointer;
+}
+
+.mail::placeholder {
+
+    font-size: 20px;
+}
+
+.mail:focus::placeholder {
+    color: rgb(73, 73, 73);
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
